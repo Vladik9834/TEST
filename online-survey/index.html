@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Опитування - Vladyslav Plakhotniuk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Онлайн Опитування - Vladyslav Plakhotniuk</h1>
+        
+        <!-- Опитування -->
+        <div id="survey" class="survey">
+            <h2>Яка ваша улюблена мова програмування?</h2>
+            <form id="surveyForm">
+                <label><input type="radio" name="option" value="JavaScript"> JavaScript</label><br>
+                <label><input type="radio" name="option" value="Python"> Python</label><br>
+                <label><input type="radio" name="option" value="Java"> Java</label><br>
+                <label><input type="radio" name="option" value="C++"> C++</label><br><br>
+                <button type="button" onclick="submitSurvey()">Проголосувати</button>
+            </form>
+        </div>
+
+        <!-- Результати -->
+        <div id="results" class="results" style="display: none;">
+            <h2>Результати опитування</h2>
+            <ul>
+                <li>JavaScript: <span id="jsVotes">0</span> голосів</li>
+                <li>Python: <span id="pythonVotes">0</span> голосів</li>
+                <li>Java: <span id="javaVotes">0</span> голосів</li>
+                <li>C++: <span id="cppVotes">0</span> голосів</li>
+            </ul>
+            <button onclick="resetSurvey()">Повернутися до опитування</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
